@@ -34,8 +34,6 @@
       color: var(--text);
     }
 
-    /* ================= HEADER ================= */
-
     header {
       position: sticky;
       top: 0;
@@ -78,8 +76,6 @@
     nav a:hover {
       color: var(--orange);
     }
-
-    /* ================= HERO ================= */
 
     .hero {
       max-width: 1100px;
@@ -149,8 +145,6 @@
       box-shadow: 0 20px 50px rgba(70, 40, 20, .18);
     }
 
-    /* ================= SECTIONS ================= */
-
     section {
       max-width: 1100px;
       margin: auto;
@@ -171,8 +165,6 @@
       margin-top: 7px;
     }
 
-    /* ================= GALLERY ================= */
-
     .gallery {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -191,8 +183,6 @@
     .gallery img:hover {
       transform: scale(1.03);
     }
-
-    /* ================= MENU ================= */
 
     .menu {
       display: grid;
@@ -234,8 +224,6 @@
       margin: 0 5px 7px;
     }
 
-    /* ================= INFO ================= */
-
     .info {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -261,25 +249,18 @@
       color: white;
     }
 
-    /* ================= LIGHTBOX ================= */
-
     .lightbox {
       position: fixed;
       inset: 0;
       z-index: 9999;
-
       display: flex;
       align-items: center;
       justify-content: center;
-
       background: rgba(0, 0, 0, .88);
-
       padding: 25px;
-
       opacity: 0;
       visibility: hidden;
       pointer-events: none;
-
       transition: opacity .25s ease, visibility .25s ease;
     }
 
@@ -292,14 +273,10 @@
     .lightbox img {
       max-width: 95vw;
       max-height: 92vh;
-
       width: auto;
       height: auto;
-
       object-fit: contain;
-
       border-radius: 10px;
-
       box-shadow: 0 20px 80px rgba(0, 0, 0, .5);
     }
 
@@ -307,29 +284,21 @@
       position: fixed;
       top: 18px;
       right: 22px;
-
       width: 48px;
       height: 48px;
-
       border: none;
       border-radius: 50%;
-
       background: rgba(255, 255, 255, .15);
       color: white;
-
       font-size: 32px;
       line-height: 48px;
-
       cursor: pointer;
-
       z-index: 10000;
     }
 
     .close-lightbox:hover {
       background: rgba(255, 255, 255, .25);
     }
-
-    /* ================= FOOTER ================= */
 
     footer {
       background: #281a12;
@@ -341,8 +310,6 @@
     footer small {
       color: #cdbfb6;
     }
-
-    /* ================= MOBILE ================= */
 
     @media(max-width: 800px) {
 
@@ -415,8 +382,6 @@
 
 <body>
 
-  <!-- ================= HEADER ================= -->
-
   <header>
 
     <div class="nav">
@@ -437,10 +402,7 @@
 
   </header>
 
-
   <main id="home">
-
-    <!-- ================= HERO ================= -->
 
     <div class="hero">
 
@@ -476,17 +438,15 @@
 
       </div>
 
-
+      <!-- FIXED PATH -->
       <img
         class="hero-img"
-        src="images/IMG_2551.png"
+        src="IMG_2551.png"
         alt="Kake Di Hatti Food"
       >
 
     </div>
 
-
-    <!-- ================= PHOTOS ================= -->
 
     <section id="photos">
 
@@ -500,30 +460,27 @@
 
       </div>
 
-
       <div class="gallery">
 
-        <img src="images/IMG_2550.jpeg" alt="Kake Di Hatti">
-        <img src="images/IMG_2549.jpeg" alt="Kake Di Hatti">
-        <img src="images/IMG_2552.jpeg" alt="Kake Di Hatti">
-        <img src="images/IMG_2547.jpeg" alt="Kake Di Hatti">
+        <img src="IMG_2550.jpeg" alt="Kake Di Hatti">
+        <img src="IMG_2549.jpeg" alt="Kake Di Hatti">
+        <img src="IMG_2552.jpeg" alt="Kake Di Hatti">
+        <img src="IMG_2547.jpeg" alt="Kake Di Hatti">
 
-        <img src="images/IMG_2556.jpeg" alt="Kake Di Hatti Food">
-        <img src="images/IMG_2537.png" alt="Kake Di Hatti Food">
-        <img src="images/IMG_2539.png" alt="Kake Di Hatti Food">
-        <img src="images/IMG_2536.png" alt="Kake Di Hatti Food">
+        <img src="IMG_2556.jpeg" alt="Kake Di Hatti Food">
+        <img src="IMG_2537.png" alt="Kake Di Hatti Food">
+        <img src="IMG_2539.png" alt="Kake Di Hatti Food">
+        <img src="IMG_2536.png" alt="Kake Di Hatti Food">
 
-        <img src="images/IMG_2530.png" alt="Kake Di Hatti Food">
-        <img src="images/IMG_2531.png" alt="Kake Di Hatti Food">
-        <img src="images/IMG_2527.png" alt="Kake Di Hatti Food">
-        <img src="images/IMG_2535.png" alt="Kake Di Hatti Food">
+        <img src="IMG_2530.png" alt="Kake Di Hatti Food">
+        <img src="IMG_2531.png" alt="Kake Di Hatti Food">
+        <img src="IMG_2527.png" alt="Kake Di Hatti Food">
+        <img src="IMG_2535.png" alt="Kake Di Hatti Food">
 
       </div>
 
     </section>
 
-
-    <!-- ================= MENU ================= -->
 
     <section id="menu">
 
@@ -540,16 +497,13 @@
 
       <div class="menu">
 
-
-        <!-- MENU 1 -->
-
         <div
           class="menu-card"
-          data-img="images/IMG_2526.png"
+          data-img="IMG_2526.png"
         >
 
           <img
-            src="images/IMG_2526.png"
+            src="IMG_2526.png"
             alt="Beverages Menu"
           >
 
@@ -562,15 +516,13 @@
         </div>
 
 
-        <!-- MENU 2 -->
-
         <div
           class="menu-card"
-          data-img="images/IMG_2527.png"
+          data-img="IMG_2527.png"
         >
 
           <img
-            src="images/IMG_2527.png"
+            src="IMG_2527.png"
             alt="Menu"
           >
 
@@ -583,15 +535,13 @@
         </div>
 
 
-        <!-- MENU 3 -->
-
         <div
           class="menu-card"
-          data-img="images/IMG_2528.png"
+          data-img="IMG_2528.png"
         >
 
           <img
-            src="images/IMG_2528.png"
+            src="IMG_2528.png"
             alt="Menu"
           >
 
@@ -604,15 +554,13 @@
         </div>
 
 
-        <!-- MENU 4 -->
-
         <div
           class="menu-card"
-          data-img="images/IMG_2529.png"
+          data-img="IMG_2529.png"
         >
 
           <img
-            src="images/IMG_2529.png"
+            src="IMG_2529.png"
             alt="Indian Main Course Menu"
           >
 
@@ -625,15 +573,13 @@
         </div>
 
 
-        <!-- MENU 5 -->
-
         <div
           class="menu-card"
-          data-img="images/IMG_2530.png"
+          data-img="IMG_2530.png"
         >
 
           <img
-            src="images/IMG_2530.png"
+            src="IMG_2530.png"
             alt="Menu"
           >
 
@@ -646,15 +592,13 @@
         </div>
 
 
-        <!-- MENU 6 -->
-
         <div
           class="menu-card"
-          data-img="images/IMG_2531.png"
+          data-img="IMG_2531.png"
         >
 
           <img
-            src="images/IMG_2531.png"
+            src="IMG_2531.png"
             alt="Menu"
           >
 
@@ -667,15 +611,13 @@
         </div>
 
 
-        <!-- MENU 7 -->
-
         <div
           class="menu-card"
-          data-img="images/IMG_2532.png"
+          data-img="IMG_2532.png"
         >
 
           <img
-            src="images/IMG_2532.png"
+            src="IMG_2532.png"
             alt="Dal and Tandoori Handi Menu"
           >
 
@@ -688,15 +630,13 @@
         </div>
 
 
-        <!-- MENU 8 -->
-
         <div
           class="menu-card"
-          data-img="images/IMG_2533.png"
+          data-img="IMG_2533.png"
         >
 
           <img
-            src="images/IMG_2533.png"
+            src="IMG_2533.png"
             alt="Chinese Momos and Rice Menu"
           >
 
@@ -709,15 +649,13 @@
         </div>
 
 
-        <!-- MENU 9 -->
-
         <div
           class="menu-card"
-          data-img="images/IMG_2534.png"
+          data-img="IMG_2534.png"
         >
 
           <img
-            src="images/IMG_2534.png"
+            src="IMG_2534.png"
             alt="Breads Menu"
           >
 
@@ -730,15 +668,13 @@
         </div>
 
 
-        <!-- MENU 10 -->
-
         <div
           class="menu-card"
-          data-img="images/IMG_2535.png"
+          data-img="IMG_2535.png"
         >
 
           <img
-            src="images/IMG_2535.png"
+            src="IMG_2535.png"
             alt="Award Winning Naans Menu"
           >
 
@@ -753,10 +689,7 @@
       </div>
 
 
-      <!-- ================= RESTAURANT INFO ================= -->
-
       <div class="info" id="contact">
-
 
         <div class="info-card">
 
@@ -800,8 +733,6 @@
   </main>
 
 
-  <!-- ================= LIGHTBOX ================= -->
-
   <div
     class="lightbox"
     id="lightbox"
@@ -825,8 +756,6 @@
   </div>
 
 
-  <!-- ================= FOOTER ================= -->
-
   <footer>
 
     <strong>
@@ -842,8 +771,6 @@
   </footer>
 
 
-  <!-- ================= JAVASCRIPT ================= -->
-
   <script>
 
     const lightbox =
@@ -855,8 +782,6 @@
     const closeLightbox =
       document.getElementById("closeLightbox");
 
-
-    /* OPEN MENU */
 
     document
       .querySelectorAll(".menu-card")
@@ -883,8 +808,6 @@
       });
 
 
-    /* CLOSE MENU */
-
     function closeBox() {
 
       lightbox.classList.remove("open");
@@ -907,8 +830,6 @@
     );
 
 
-    /* CLOSE WHEN CLICKING OUTSIDE IMAGE */
-
     lightbox.addEventListener(
       "click",
       (event) => {
@@ -920,8 +841,6 @@
       }
     );
 
-
-    /* ESC KEY */
 
     document.addEventListener(
       "keydown",
