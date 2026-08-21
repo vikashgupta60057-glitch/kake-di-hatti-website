@@ -4,636 +4,470 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Kake Di Hatti — Pure Veg | Jammu</title>
+  <title>Kake Di Hatti | Jewel Chowk Jammu</title>
 
-  <meta
-    name="description"
-    content="Kake Di Hatti Pure Veg Restaurant, Jewel Chowk, Jammu."
-  >
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    :root {
+      --cream: #fff8ef;
+      --brown: #4b2d1d;
+      --orange: #d97725;
+      --light: #f4e4d3;
+      --text: #211812;
+      --muted: #75675d;
+    }
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap"
-    rel="stylesheet"
-  >
+    html {
+      scroll-behavior: smooth;
+    }
 
-  <link rel="stylesheet" href="style.css">
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--cream);
+      color: var(--text);
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,248,239,.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid #ead8c5;
+    }
+
+    .nav {
+      max-width: 1100px;
+      margin: auto;
+      padding: 16px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      color: var(--orange);
+      font-size: 23px;
+      font-weight: 900;
+    }
+
+    .logo small {
+      display: block;
+      color: var(--brown);
+      font-size: 9px;
+      letter-spacing: 2px;
+      margin-top: 3px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--brown);
+      font-weight: bold;
+      margin-left: 20px;
+    }
+
+    .hero {
+      max-width: 1100px;
+      margin: auto;
+      padding: 55px 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 35px;
+      align-items: center;
+    }
+
+    .badge {
+      display: inline-block;
+      background: var(--light);
+      color: var(--brown);
+      padding: 9px 14px;
+      border-radius: 50px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    h1 {
+      font-size: clamp(50px, 8vw, 82px);
+      line-height: .9;
+      margin: 20px 0;
+      color: var(--brown);
+    }
+
+    .hero p {
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.6;
+      max-width: 550px;
+    }
+
+    .buttons {
+      margin-top: 25px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      padding: 14px 20px;
+      border-radius: 14px;
+      font-weight: bold;
+    }
+
+    .primary {
+      background: var(--orange);
+      color: white;
+    }
+
+    .secondary {
+      background: white;
+      color: var(--brown);
+      border: 1px solid #e4d0bc;
+    }
+
+    .hero-img {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+      border-radius: 28px;
+      box-shadow: 0 20px 50px rgba(70,40,20,.18);
+    }
+
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 55px 20px;
+    }
+
+    .title {
+      margin-bottom: 25px;
+    }
+
+    .title h2 {
+      font-size: 36px;
+      color: var(--brown);
+    }
+
+    .title p {
+      color: var(--muted);
+      margin-top: 7px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 18px;
+    }
+
+    .menu {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .menu-card {
+      background: white;
+      padding: 12px;
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(70,40,20,.08);
+    }
+
+    .menu-card img {
+      width: 100%;
+      height: 390px;
+      object-fit: cover;
+      object-position: top;
+      border-radius: 14px;
+    }
+
+    .menu-card h3 {
+      color: var(--brown);
+      margin: 14px 5px 5px;
+    }
+
+    .menu-card p {
+      color: var(--muted);
+      font-size: 13px;
+      margin: 0 5px 7px;
+    }
+
+    .info {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin-top: 35px;
+    }
+
+    .info-card {
+      background: var(--brown);
+      color: white;
+      padding: 24px;
+      border-radius: 20px;
+      line-height: 1.6;
+    }
+
+    .info-card strong {
+      color: #f2aa65;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .info-card a {
+      color: white;
+    }
+
+    footer {
+      background: #281a12;
+      color: white;
+      text-align: center;
+      padding: 35px 20px;
+    }
+
+    footer small {
+      color: #cdbfb6;
+    }
+
+    @media(max-width:800px) {
+
+      nav {
+        display: none;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        padding-top: 35px;
+      }
+
+      .hero-img {
+        height: 380px;
+      }
+
+      .gallery {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .menu {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .info {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media(max-width:520px) {
+
+      .menu {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery img {
+        height: 170px;
+      }
+
+      .hero-img {
+        height: 330px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-  <div class="announcement">
-    PURE VEGETARIAN
-    <span>•</span>
-    JEWEL CHOWK, JAMMU
-    <span>•</span>
-    4.5 ★ GOOGLE RATING
-  </div>
-
-  <header class="nav">
-
-    <a class="logo" href="#home">
-      <span>KD</span>
-
-      <b>
-        Kake Di Hatti
-        <small>PURE VEG · JAMMU</small>
-      </b>
-    </a>
-
-    <nav>
-      <a href="#menu">Menu</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#reviews">Reviews</a>
-      <a href="#visit">Visit</a>
-    </nav>
-
-    <div class="nav-actions">
-      <a class="phone" href="tel:+919797600190">
-        97976 00190
-      </a>
-
-      <a class="nav-cta" href="#menu">
-        View Menu
-      </a>
-    </div>
-
-  </header>
-
-
-  <main id="home">
-
-    <!-- HERO -->
-
-    <section class="hero">
-
-      <img
-        src="assets/hero.jpg"
-        alt="Kake Di Hatti food"
-      >
-
-      <div class="hero-shade"></div>
-
-      <div class="hero-content">
-
-        <div class="eyebrow">
-          ✦ AUTHENTIC NORTH INDIAN · PURE VEG
-        </div>
-
-        <h1>
-          Big naan.<br>
-          <em>Big flavour.</em>
-        </h1>
-
-        <p>
-          A warm, generous North Indian dining experience
-          at Jewel Chowk, Jammu.
-        </p>
-
-        <div class="hero-buttons">
-
-          <a class="btn primary" href="#menu">
-            Explore Menu
-            <span>↗</span>
-          </a>
-
-          <a
-            class="btn ghost"
-            target="_blank"
-            href="https://www.google.com/maps/search/?api=1&query=Kake+Di+Hatti+Jewel+Chowk+Jammu"
-          >
-            Get Directions
-          </a>
-
-        </div>
-
-        <div class="rating">
-
-          <strong>4.5</strong>
-
-          <span>★★★★★</span>
-
-          <small>
-            1,193+ Google reviews
-          </small>
-
-        </div>
-
-      </div>
-
-      <div class="hero-tag">
-        2ND FLOOR · ABOVE MR.DIY · JEWEL CHOWK
-      </div>
-
-    </section>
-
-
-    <!-- MARQUEE -->
-
-    <section class="marquee">
-
-      <div>
-        PURE VEG
-        <i>✦</i>
-
-        FRESH TANDOOR
-        <i>✦</i>
-
-        FAMILY DINING
-        <i>✦</i>
-
-        DINE-IN
-        <i>✦</i>
-
-        TAKEAWAY
-        <i>✦</i>
-
-        DELIVERY
-        <i>✦</i>
-      </div>
-
-    </section>
-
-
-    <!-- MENU -->
-
-    <section class="section" id="menu">
-
-      <div class="section-head">
-
-        <div>
-
-          <span class="eyebrow dark">
-            THE MENU
-          </span>
-
-          <h2>
-            Made to make<br>
-            <em>you hungry.</em>
-          </h2>
-
-        </div>
-
-        <p>
-          These menu photos are taken from the restaurant
-          material you provided. Tap any image to view it
-          full-screen.
-        </p>
-
-      </div>
-
-
-      <div class="menu-grid">
-
-        <button
-          class="menu-card large"
-          data-img="assets/menu1.jpg"
-        >
-
-          <img
-            src="assets/menu1.jpg"
-            alt="Kake Di Hatti menu"
-          >
-
-          <span>
-            MENU · 01
-            <b>↗</b>
-          </span>
-
-        </button>
-
-
-        <button
-          class="menu-card"
-          data-img="assets/menu2.jpg"
-        >
-
-          <img
-            src="assets/menu2.jpg"
-            alt="Kake Di Hatti menu"
-          >
-
-          <span>
-            MENU · 02
-            <b>↗</b>
-          </span>
-
-        </button>
-
-
-        <button
-          class="menu-card"
-          data-img="assets/menu3.jpg"
-        >
-
-          <img
-            src="assets/menu3.jpg"
-            alt="Kake Di Hatti menu"
-          >
-
-          <span>
-            MENU · 03
-            <b>↗</b>
-          </span>
-
-        </button>
-
-
-        <button
-          class="menu-card"
-          data-img="assets/menu4.jpg"
-        >
-
-          <img
-            src="assets/menu4.jpg"
-            alt="Kake Di Hatti menu"
-          >
-
-          <span>
-            MENU · 04
-            <b>↗</b>
-          </span>
-
-        </button>
-
-      </div>
-
-
-      <div class="menu-note">
-
-        <span>✓</span>
-
-        <div>
-
-          <strong>
-            Menu shown exactly from the supplied menu photos.
-          </strong>
-
-          <small>
-            Prices and dish names are not invented on this demo.
-          </small>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- FEATURE -->
-
-    <section class="feature">
-
-      <div class="feature-photo">
-
-        <img
-          src="assets/food2.jpg"
-          alt="Amritsari kulcha"
-        >
-
-      </div>
-
-
-      <div class="feature-copy">
-
-        <span class="eyebrow">
-          DINERS' FAVOURITES
-        </span>
-
-        <h2>
-          Huge naans.<br>
-          <em>Flavourful gravies.</em>
-        </h2>
-
-        <p>
-          Google review summaries frequently highlight
-          the restaurant's huge naans, Amritsari kulcha,
-          flavourful gravies, pleasant ambience and
-          attentive service.
-        </p>
-
-
-        <div class="mini-stats">
-
-          <div>
-            <b>4.5★</b>
-            <small>Google rating</small>
-          </div>
-
-          <div>
-            <b>1,193+</b>
-            <small>Reviews</small>
-          </div>
-
-          <div>
-            <b>PURE</b>
-            <small>Vegetarian</small>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- GALLERY -->
-
-    <section class="dark" id="gallery">
-
-      <div class="section-head light">
-
-        <div>
-
-          <span class="eyebrow">
-            THE SPACE
-          </span>
-
-          <h2>
-            A place for<br>
-            <em>good moments.</em>
-          </h2>
-
-        </div>
-
-        <p>
-          Casual, trendy and comfortable — made for
-          quick bites, family meals and relaxed dinners.
-        </p>
-
-      </div>
-
-
-      <div class="gallery-grid">
-
-        <img
-          class="g-a"
-          src="assets/interior.jpg"
-          alt="Restaurant interior"
-        >
-
-        <img
-          class="g-b"
-          src="assets/door.jpg"
-          alt="Restaurant entrance"
-        >
-
-        <img
-          class="g-c"
-          src="assets/sign.jpg"
-          alt="Kake Di Hatti sign"
-        >
-
-        <img
-          class="g-d"
-          src="assets/outside.jpg"
-          alt="Restaurant exterior"
-        >
-
-      </div>
-
-    </section>
-
-
-    <!-- REVIEWS -->
-
-    <section class="section reviews" id="reviews">
-
-      <div class="section-head">
-
-        <div>
-
-          <span class="eyebrow dark">
-            GOOGLE REVIEWS
-          </span>
-
-          <h2>
-            People are<br>
-            <em>talking.</em>
-          </h2>
-
-        </div>
-
-
-        <div class="big-rating">
-
-          <b>4.5</b>
-
-          <span>★★★★★</span>
-
-          <small>
-            1,193+ reviews
-          </small>
-
-        </div>
-
-      </div>
-
-
-      <div class="review-grid">
-
-        <article>
-
-          <div>★★★★★</div>
-
-          <p>
-            “Good service, food tasty, staff amazing.
-            Interior amazing.”
-          </p>
-
-          <small>
-            Google review
-          </small>
-
-        </article>
-
-
-        <article>
-
-          <div>★★★★★</div>
-
-          <p>
-            “Food is good, ambience is good.
-            Best price, best quality.”
-          </p>
-
-          <small>
-            Google review
-          </small>
-
-        </article>
-
-
-        <article>
-
-          <div>★★★★★</div>
-
-          <p>
-            “Delicious, authentic North Indian
-            vegetarian food, with huge naans and
-            flavourful gravies.”
-          </p>
-
-          <small>
-            Google review summary
-          </small>
-
-        </article>
-
-      </div>
-
-    </section>
-
-
-    <!-- LOCATION -->
-
-    <section class="visit" id="visit">
-
-      <div class="visit-inner">
-
-        <div>
-
-          <span class="eyebrow">
-            COME BY
-          </span>
-
-          <h2>
-            Jewel Chowk,<br>
-            <em>Jammu.</em>
-          </h2>
-
-          <p>
-            2nd Floor, Jewel Chowk, next to Reliance
-            Digital, above MR.DIY, Jammu,
-            Jammu & Kashmir 180001.
-          </p>
-
-
-          <div class="hero-buttons">
-
-            <a
-              class="btn dark-btn"
-              href="tel:+919797600190"
-            >
-              Call 97976 00190
-            </a>
-
-            <a
-              class="btn light-btn"
-              target="_blank"
-              href="https://www.google.com/maps/search/?api=1&query=Kake+Di+Hatti+Jewel+Chowk+Jammu"
-            >
-              Open Maps ↗
-            </a>
-
-          </div>
-
-        </div>
-
-
-        <div class="location-card">
-
-          <div class="pin">
-            ✦
-          </div>
-
-          <b>
-            KAKE DI HATTI
-          </b>
-
-          <span>
-            JEWEL CHOWK · JAMMU
-          </span>
-
-          <small>
-            ABOVE MR.DIY
-          </small>
-
-        </div>
-
-      </div>
-
-    </section>
-
-  </main>
-
-
-  <!-- FOOTER -->
-
-  <footer>
+<header>
+  <div class="nav">
 
     <div class="logo">
-
-      <span>KD</span>
-
-      <b>
-        Kake Di Hatti
-        <small>PURE VEG · JAMMU</small>
-      </b>
-
+      kake di hatti
+      <small>PURE VEG • JEWEL CHOWK • JAMMU</small>
     </div>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#photos">Photos</a>
+      <a href="#menu">Menu</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+  </div>
+</header>
+
+
+<main id="home">
+
+  <!-- HERO -->
+
+  <div class="hero">
 
     <div>
-      © 2026 Kake Di Hatti
+
+      <span class="badge">
+        PURE VEGETARIAN • NORTH INDIAN
+      </span>
+
+      <h1>
+        King of<br>
+        Naans.
+      </h1>
+
+      <p>
+        Authentic North Indian vegetarian food,
+        huge naans, flavorful gravies and a
+        comfortable dining experience at
+        Jewel Chowk, Jammu.
+      </p>
+
+      <div class="buttons">
+
+        <a href="#menu" class="btn primary">
+          View Menu
+        </a>
+
+        <a href="tel:9797600190" class="btn secondary">
+          Call 97976 00190
+        </a>
+
+      </div>
+
     </div>
 
-    <a href="tel:+919797600190">
-      97976 00190
-    </a>
-
-  </footer>
-
-
-  <!-- MENU LIGHTBOX -->
-
-  <div
-    class="lightbox"
-    id="lightbox"
-    aria-hidden="true"
-  >
-
-    <button
-      class="close"
-      id="closeLightbox"
-      aria-label="Close"
-    >
-      ×
-    </button>
-
     <img
-      id="lightboxImg"
-      src=""
-      alt="Menu preview"
+      class="hero-img"
+      src="images/food1.jpg"
+      alt="Kake Di Hatti Food"
     >
 
   </div>
 
 
-  <!-- MOBILE BAR -->
+  <!-- PHOTOS -->
 
-  <div class="mobile-bar">
+  <section id="photos">
 
-    <a href="#menu">
-      Menu
-    </a>
+    <div class="title">
+      <h2>Our Restaurant</h2>
+      <p>Food, ambience and restaurant photos</p>
+    </div>
 
-    <a href="tel:+919797600190">
-      Call
-    </a>
+    <div class="gallery">
 
-    <a
-      target="_blank"
-      href="https://www.google.com/maps/search/?api=1&query=Kake+Di+Hatti+Jewel+Chowk+Jammu"
-    >
-      Directions
-    </a>
+      <img src="images/restaurant1.jpg" alt="Kake Di Hatti">
+      <img src="images/restaurant2.jpg" alt="Kake Di Hatti">
+      <img src="images/food2.jpg" alt="Kake Di Hatti Food">
+      <img src="images/food3.jpg" alt="Kake Di Hatti Food">
 
-  </div>
+    </div>
+
+  </section>
 
 
-  <script src="script.js"></script>
+  <!-- MENU -->
+
+  <section id="menu">
+
+    <div class="title">
+      <h2>Our Menu</h2>
+      <p>Explore our complete menu</p>
+    </div>
+
+    <div class="menu">
+
+      <div class="menu-card">
+        <img src="images/menu1.jpg">
+        <h3>Beverages & Mocktails</h3>
+        <p>View full menu</p>
+      </div>
+
+      <div class="menu-card">
+        <img src="images/menu2.jpg">
+        <h3>Indian Main Course</h3>
+        <p>View full menu</p>
+      </div>
+
+      <div class="menu-card">
+        <img src="images/menu3.jpg">
+        <h3>Dal & Tandoori Handi</h3>
+        <p>View full menu</p>
+      </div>
+
+      <div class="menu-card">
+        <img src="images/menu4.jpg">
+        <h3>Chinese, Momos & Rice</h3>
+        <p>View full menu</p>
+      </div>
+
+      <div class="menu-card">
+        <img src="images/menu5.jpg">
+        <h3>Award Winning Naans</h3>
+        <p>View full menu</p>
+      </div>
+
+      <div class="menu-card">
+        <img src="images/menu6.jpg">
+        <h3>Breads / Roti / Paratha</h3>
+        <p>View full menu</p>
+      </div>
+
+    </div>
+
+
+    <!-- RESTAURANT INFO -->
+
+    <div class="info" id="contact">
+
+      <div class="info-card">
+        <strong>📍 ADDRESS</strong>
+        2nd Floor, Jewel Chowk,
+        next to Reliance Digital,
+        above MR DIY,
+        Jammu, Jammu & Kashmir 180001
+      </div>
+
+      <div class="info-card">
+        <strong>📞 CONTACT</strong>
+        <a href="tel:9797600190">
+          97976 00190
+        </a>
+      </div>
+
+      <div class="info-card">
+        <strong>🥗 DINING</strong>
+        Dine-in • Takeaway • Delivery
+        <br>
+        Pure Vegetarian
+      </div>
+
+    </div>
+
+  </section>
+
+</main>
+
+
+<footer>
+
+  <strong>Kake Di Hatti</strong>
+
+  <br>
+
+  <small>
+    Jewel Chowk, Jammu • Pure Veg Restaurant
+  </small>
+
+</footer>
 
 </body>
 </html>
